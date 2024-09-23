@@ -1,0 +1,138 @@
+{
+    "hospitals": [
+      {
+        "id": 1,
+        "name": "Центральная больница",
+        "address": "Улица Ленина, д. 123",
+        "phone": "+7 (495) 123-45-67",
+        "email": "central_bolnica@example.com"
+      },
+      {
+        "id": 2,
+        "name": "Клиника университета",
+        "address": "Профессора Королева, д. 456",
+        "phone": "+7 (495) 890-90-90",
+        "email": "clinic@example.com"
+      }
+    ],
+    "doctors": [
+      {
+        "id": 1,
+        "name": "Иван Иванов",
+        "specialty": "Кардиология",
+        "experience": 15,
+        "hospital_id": 1
+      },
+      {
+        "id": 2,
+        "name": "Мария Петрова",
+        "specialty": "Нейрохирургия",
+        "experience": 12,
+        "hospital_id": 1
+      },
+      {
+        "id": 3,
+        "name": "Сергей Сидоров",
+        "specialty": "Онкология",
+        "experience": 20,
+        "hospital_id": 2
+      }
+    ],
+    "patients": [
+      {
+        "id": 1,
+        "first_name": "Алиса",
+        "last_name": "Смит",
+        "age": 35,
+        "diagnosis": "Гипертония"
+      },
+      {
+        "id": 2,
+        "first_name": "Боб",
+        "last_name": "Джонсон",
+        "age": 42,
+        "diagnosis": "Диабет"
+      },
+      {
+        "id": 3,
+        "first_name": "Чарли",
+        "last_name": "Дэвис",
+        "age": 28,
+        "diagnosis": "Астма"
+      }
+    ],
+    "diagnoses": [
+      {
+        "id": 1,
+        "name": "Гипертония",
+        "description": "Постоянное повышение артериального давления"
+      },
+      {
+        "id": 2,
+        "name": "Диабет",
+        "description": "Недостаток инсулина или нарушение его функции"
+      },
+      {
+        "id": 3,
+        "name": "Астма",
+        "description": "Хроническое воспалительное заболевание дыхательных путей"
+      }
+    ],
+    "treatments": [
+      {
+        "id": 1,
+        "patient_id": 1,
+        "doctor_id": 1,
+        "diagnosis_id": 1,
+        "start_date": "2023-01-01",
+        "duration": 30
+      }
+    ],
+    "medications": [
+      {
+        "id": 1,
+        "name": "Лизиноприл",
+        "dosage_form": "Таблетки",
+        "dose": "10 мг",
+        "frequency": "Раз в день",
+        "duration": 30
+      }
+    ],
+    "analyses": [
+      {
+        "id": 1,
+        "patient_id": 2,
+        "doctor_id": 2,
+        "analysis_type": "Кровь на анализ",
+        "result": "Норма"
+      }
+    ],
+    "equipment": [
+      {
+        "id": 1,
+        "name": "ЭКГ-машина",
+        "type": "Диагностическая"
+      }
+    ],
+    "surgeries": [
+      {
+        "id": 1,
+        "patient_id": 3,
+        "anesthesiologist_id": 2,
+        "surgeon_id": 2,
+        "operation_date": "2023-02-15",
+        "status": "Завершено"
+      }
+    ],
+    "reports": [
+      {
+        "id": 1,
+        "surgery_id": 1,
+        "author_id": 2,
+        "creation_date": "2023-02-16",
+        "summary": "Успешное удаление аппендицита",
+        "observations": "Нет осложнений"
+      }
+    ]
+  }
+  

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <hospitals>
+    <hospital id="1">
+      <name>Центральная больница</name>
+      <address>Улица Ленина, д. 123</address>
+      <phone>+7 (495) 123-45-67</phone>
+      <email>central_bolnica@example.com</email>
+    </hospital>
+    <hospital id="2">
+      <name>Клиника университета</name>
+      <address>Профессора Королева, д. 456</address>
+      <phone>+7 (495) 890-90-90</phone>
+      <email>clinic@example.com</email>
+    </hospital>
+  </hospitals>
+  <doctors>
+    <doctor id="1">
+      <name>Иван Иванов</name>
+      <specialty>Кардиология</specialty>
+      <experience>15</experience>
+      <hospital_id>1</hospital_id>
+    </doctor>
+    <doctor id="2">
+      <name>Мария Петрова</name>
+      <specialty>Нейрохирургия</specialty>
+      <experience>12</experience>
+      <hospital_id>1</hospital_id>
+    </doctor>
+    <doctor id="3">
+      <name>Сергей Сидоров</name>
+      <specialty>Онкология</specialty>
+      <experience>20</experience>
+      <hospital_id>2</hospital_id>
+    </doctor>
+  </doctors>
+  <patients>
+    <patient id="1">
+      <first_name>Алиса</first_name>
+      <last_name>Смит</last_name>
+      <age>35</age>
+      <diagnosis>Гипертония</diagnosis>
+    </patient>
+    <patient id="2">
+      <first_name>Боб</first_name>
+      <last_name>Джонсон</last_name>
+      <age>42</age>
+      <diagnosis>Диабет</diagnosis>
+    </patient>
+    <patient id="3">
+      <first_name>Чарли</first_name>
+      <last_name>Дэвис</last_name>
+      <age>28</age>
+      <diagnosis>Астма</diagnosis>
+    </patient>
+  </patients>
+  <diagnoses>
+    <diagnosis id="1">
+      <name>Гипертония</name>
+      <description>Постоянное повышение артериального давления</description>
+    </diagnosis>
+    <diagnosis id="2">
+      <name>Диабет</name>
+      <description>Недостаток инсулина или нарушение его функции</description>
+    </diagnosis>
+    <diagnosis id="3">
+      <name>Астма</name>
+      <description>Хроническое воспалительное заболевание дыхательных путей</description>
+    </diagnosis>
+  </diagnoses>
+  <treatments>
+    <treatment id="1">
+      <patient_id>1</patient_id>
+      <doctor_id>1</doctor_id>
+      <diagnosis_id>1</diagnosis_id>
+      <start_date>2023-01-01</start_date>
+      <duration>30</duration>
+    </treatment>
+  </treatments>
+  <medications>
+    <medication id="1">
+      <name>Лизиноприл</name>
+      <dosage_form>Таблетки</dosage_form>
+      <dose>10 мг</dose>
+      <frequency>Раз в день</frequency>
+      <duration>30</duration>
+    </medication>
+  </medications>
+  <analyses>
+    <analysis id="1">
+      <patient_id>2</patient_id>
+      <doctor_id>2</doctor_id>
+      <analysis_type>Кровь на анализ</analysis_type>
+      <result>Норма</result>
+    </analysis>
+  </analyses>
+  <equipment>
+    <equipment_item id="1">
+      <name>ЭКГ-машина</name>
+      <type>Диагностическая</type>
+    </equipment_item>
+  </equipment>
+  <surgeries>
+    <surgery id="1">
+      <patient_id>3</patient_id>
+      <anesthesiologist_id>2</anesthesiologist_id>
+      <surgeon_id>2</surgeon_id>
+      <operation_date>2023-02-15</operation_date>
+      <status>Завершено</status>
+    </surgery>
+  </surgeries>
+  <reports>
+    <report id="1">
+      <surgery_id>1</surgery_id>
+      <author_id>2</author_id>
+      <creation_date>2023-02-16</creation_date>
+      <summary>Успешное удаление аппендицита</summary>
+      <observations>Нет осложнений</observations>
+    </report>
+  </reports>
+</data>

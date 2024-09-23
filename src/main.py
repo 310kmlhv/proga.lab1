@@ -1,6 +1,6 @@
 import json_
 import xml_
-from mmedia import Hospital, Doctor, Patient, Diagnosis, Treatment, Medication, Analysis, Surgery, Report
+from media import Hospital, Doctor, Patient, Diagnosis, Treatment, Medication, Analysis, Surgery, Report
 
 
 class InvalidFileFormatError(Exception):
