@@ -1,11 +1,36 @@
 {
   "patients": [
     {
-      "name": "двдвддв"
+      "id": 1,
+      "name": "pacient"
     }
   ],
-  "doctors": [],
-  "nurses": [],
-  "medications": [],
-  "appointments": []
+  "doctors": [
+    {
+      "id": 1,
+      "name": "vrach"
+    }
+  ],
+  "nurses": [
+    {
+      "id": 1,
+      "name": "sestra"
+    }
+  ],
+  "medications": [
+    {
+      "id": 1,
+      "name": "vismut",
+      "dosage": "12"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 1,
+      "nurse_id": 1,
+      "medication_id": 1
+    }
+  ]
 }

@@ -1,2 +1,1 @@
-<?xml version='1.0' encoding='utf-8'?>
-<data><patients><patient>двдвддв</patient></patients><doctors /><nurses /><medications /><appointments /></data>
+<hospital_data><patients><patient><id>1</id><name>pacient</name></patient></patients><doctors><doctor><id>1</id><name>vrach</name></doctor></doctors><nurses><nurse><id>1</id><name>sestra</name></nurse></nurses><medications><medication><id>1</id><name>vismut</name><dosage>12</dosage></medication></medications><appointments><appointment><id>1</id><patient_id>1</patient_id><doctor_id>1</doctor_id><nurse_id>1</nurse_id><medication_id>1</medication_id></appointment></appointments></hospital_data>

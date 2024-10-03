@@ -1,16 +1,12 @@
 from menu import Menu
-from xml_handler import load_from_xml, save_to_xml
-from json_handler import load_from_json, save_to_json
 
 def main():
     menu = Menu()
     
     while True:
-        print("\nГлавное меню:")
         menu.display_menu()
-        
         choice = input("Введите номер действия: ")
-        
+
         if choice == "1":
             menu.add_patient()
         elif choice == "2":
@@ -39,8 +35,6 @@ def main():
             break
         else:
             print("Неверный выбор. Пожалуйста, повторите.")
-        
-        input("Нажмите Enter для продолжения...")
 
 if __name__ == "__main__":
     main()
