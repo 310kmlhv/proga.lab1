@@ -2,35 +2,75 @@
   "patients": [
     {
       "id": 1,
-      "name": "pacient"
+      "name": "valera"
     }
   ],
   "doctors": [
     {
       "id": 1,
-      "name": "vrach"
+      "name": "boris"
+    },
+    {
+      "id": 2,
+      "name": "katia"
     }
   ],
   "nurses": [
     {
       "id": 1,
-      "name": "sestra"
+      "name": "marina"
     }
   ],
   "medications": [
     {
       "id": 1,
-      "name": "vismut",
-      "dosage": "12"
+      "name": "iodomarin",
+      "dosage": "55"
     }
   ],
   "appointments": [
     {
       "id": 1,
+      "patient_id": 3,
+      "doctor_id": 3,
+      "nurse_id": 3,
+      "medication_id": 3
+    }
+  ],
+  "diseases": [
+    {
+      "id": 1,
+      "name": "vetrianka",
+      "description": "krasnie piatna"
+    }
+  ],
+  "treatments": [
+    {
+      "id": 1,
+      "name": "dieta",
+      "description": "poleznoe kyshat"
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "number": "999",
+      "type": "obshaia"
+    }
+  ],
+  "bills": [
+    {
+      "id": 1,
       "patient_id": 1,
-      "doctor_id": 1,
-      "nurse_id": 1,
-      "medication_id": 1
+      "amount": 10000.0
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "bill_id": 1,
+      "amount": 1000000.0,
+      "date": "1.1.1"
     }
   ]
 }

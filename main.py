@@ -18,20 +18,40 @@ def main():
         elif choice == "5":
             menu.add_appointment()
         elif choice == "6":
-            menu.display_patients()
+            menu.add_disease()
         elif choice == "7":
-            menu.display_doctors()
+            menu.add_treatment()
         elif choice == "8":
-            menu.display_nurses()
+            menu.add_room()
         elif choice == "9":
-            menu.display_medications()
+            menu.add_bill()
         elif choice == "10":
-            menu.display_appointments()
+            menu.add_payment()
         elif choice == "11":
-            menu.save_data()
+            menu.display_patients()
         elif choice == "12":
-            menu.load_data()
+            menu.display_doctors()
         elif choice == "13":
+            menu.display_nurses()
+        elif choice == "14":
+            menu.display_medications()
+        elif choice == "15":
+            menu.display_appointments()
+        elif choice == "16":
+            menu.display_diseases()
+        elif choice == "17":
+            menu.display_treatments()
+        elif choice == "18":
+            menu.display_rooms()
+        elif choice == "19":
+            menu.display_bills()
+        elif choice == "20":
+            menu.display_payments()
+        elif choice == "21":
+            menu.save_data()
+        elif choice == "22":
+            menu.load_data()
+        elif choice == "23":
             break
         else:
             print("Неверный выбор. Пожалуйста, повторите.")
