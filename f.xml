@@ -2,75 +2,21 @@
   <patients>
     <patient>
       <id>1</id>
-      <name>valera</name>
+      <name>katia</name>
     </patient>
   </patients>
   <doctors>
     <doctor>
       <id>1</id>
-      <name>boris</name>
-    </doctor>
-    <doctor>
-      <id>2</id>
-      <name>katia</name>
+      <name>vrach</name>
     </doctor>
   </doctors>
-  <nurses>
-    <nurse>
-      <id>1</id>
-      <name>marina</name>
-    </nurse>
-  </nurses>
-  <medications>
-    <medication>
-      <id>1</id>
-      <name>iodomarin</name>
-      <dosage>55</dosage>
-    </medication>
-  </medications>
-  <appointments>
-    <appointment>
-      <id>1</id>
-      <patient_id>3</patient_id>
-      <doctor_id>3</doctor_id>
-      <nurse_id>3</nurse_id>
-      <medication_id>3</medication_id>
-    </appointment>
-  </appointments>
-  <diseases>
-    <disease>
-      <id>1</id>
-      <name>vetrianka</name>
-      <description>krasnie piatna</description>
-    </disease>
-  </diseases>
-  <treatments>
-    <treatment>
-      <id>1</id>
-      <name>dieta</name>
-      <description>poleznoe kyshat</description>
-    </treatment>
-  </treatments>
-  <rooms>
-    <room>
-      <id>1</id>
-      <number>999</number>
-      <type>obshaia</type>
-    </room>
-  </rooms>
-  <bills>
-    <bill>
-      <id>1</id>
-      <patient_id>1</patient_id>
-      <amount>10000.0</amount>
-    </bill>
-  </bills>
-  <payments>
-    <payment>
-      <id>1</id>
-      <bill_id>1</bill_id>
-      <amount>1000000.0</amount>
-      <date>1.1.1</date>
-    </payment>
-  </payments>
+  <nurses />
+  <medications />
+  <appointments />
+  <diseases />
+  <treatments />
+  <rooms />
+  <bills />
+  <payments />
 </hospital_data>

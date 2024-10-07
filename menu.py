@@ -40,9 +40,11 @@ class Menu:
         print("18. Просмотреть список палат")
         print("19. Просмотреть список счетов")
         print("20. Просмотреть список оплат")
-        print("21. Сохранить данные")
-        print("22. Загрузить данные")
-        print("23. Выход из программы")
+        print("21. Сохранить данные в xml")
+        print("22. Сохранить данные в json")
+        print("23. Загрузить данные в xml")
+        print("24. Загрузить данные в json")
+        print("25. Выход из программы")
 
 
     def add_patient(self):
@@ -205,7 +207,7 @@ class Menu:
                 print(f"{payment.id}: Счет {payment.bill_id} - Сумма {payment.amount} - Дата {payment.date}")
 
 
-    def save_data(self):
+    def save_data_xml(self):
         patients = [{"id": p.id, "name": p.name} for p in self.patients]
         doctors = [{"id": d.id, "name": d.name} for d in self.doctors]
         nurses = [{"id": n.id, "name": n.name} for n in self.nurses]
@@ -226,13 +228,40 @@ class Menu:
         bills = [{"id": b.id, "patient_id": b.patient_id, "amount": b.amount} for b in self.bills]
         payments = [{"id": p.id, "bill_id": p.bill_id, "amount": p.amount, "date": p.date} for p in self.payments]
 
-        # Сохраняем все данные в файлы JSON и XML
+        # Сохраняем все данные в файлы XML
         XmlHandler.save_to_xml(patients, doctors, nurses, medications, appointments, diseases, treatments, rooms, bills, payments, "/Users/kseniamalahova/Desktop/proga.lab1/f.xml")
+        
+        
+        print("Данные успешно сохранены в файлах f.xml")
+
+    def save_data_json(self):
+        patients = [{"id": p.id, "name": p.name} for p in self.patients]
+        doctors = [{"id": d.id, "name": d.name} for d in self.doctors]
+        nurses = [{"id": n.id, "name": n.name} for n in self.nurses]
+        medications = [{"id": m.id, "name": m.name, "dosage": m.dosage} for m in self.medications]
+        appointments = [
+            {
+                "id": a.id,
+                "patient_id": a.patient_id,
+                "doctor_id": a.doctor_id,
+                "nurse_id": a.nurse_id,
+                "medication_id": a.medication_id
+            }
+            for a in self.appointments
+        ]
+        diseases = [{"id": d.id, "name": d.name, "description": d.description} for d in self.diseases]
+        treatments = [{"id": t.id, "name": t.name, "description": t.description} for t in self.treatments]
+        rooms = [{"id": r.id, "number": r.number, "type": r.type} for r in self.rooms]
+        bills = [{"id": b.id, "patient_id": b.patient_id, "amount": b.amount} for b in self.bills]
+        payments = [{"id": p.id, "bill_id": p.bill_id, "amount": p.amount, "date": p.date} for p in self.payments]
+
+        # Сохраняем все данные в файлы JSON
+        
         JsonHandler.save_to_json(patients, doctors, nurses, medications, appointments, diseases, treatments, rooms, bills, payments, "/Users/kseniamalahova/Desktop/proga.lab1/f.json")
         
-        print("Данные успешно сохранены в файлах f.xml и f.json.")
+        print("Данные успешно сохранены в файлах f.json.")
 
-    def load_data(self):
+    def load_data_xml(self):
         try:
             patients, doctors, nurses, medications, appointments, diseases, treatments, rooms, bills, payments = XmlHandler.load_from_xml("/Users/kseniamalahova/Desktop/proga.lab1/f.xml")
             self.patients = patients
@@ -248,20 +277,22 @@ class Menu:
             
             print(f"Загружено {len(self.patients)} пациентов, {len(self.doctors)} врачей, {len(self.nurses)} медсестер, {len(self.medications)} лекарств, {len(self.appointments)} назначений, {len(self.diseases)} болезней, {len(self.treatments)} лечений, {len(self.rooms)} палат, {len(self.bills)} счетов и {len(self.payments)} оплат.")
         except FileNotFoundError:
-            print("Файл f.xml не найден. Попытка загрузки из f.json...")
-            try:
-                patients, doctors, nurses, medications, appointments, diseases, treatments, rooms, bills, payments = JsonHandler.load_from_json("/Users/kseniamalahova/Desktop/proga.lab1/f.json")
-                self.patients = patients
-                self.doctors = doctors
-                self.nurses = nurses
-                self.medications = medications
-                self.appointments = appointments
-                self.diseases = diseases
-                self.treatments = treatments
-                self.rooms = rooms
-                self.bills = bills
-                self.payments = payments
-                
-                print(f"Загружено {len(self.patients)} пациентов, {len(self.doctors)} врачей, {len(self.nurses)} медсестер, {len(self.medications)} лекарств, {len(self.appointments)} назначений, {len(self.diseases)} болезней, {len(self.treatments)} лечений, {len(self.rooms)} палат, {len(self.bills)} счетов и {len(self.payments)} оплат.")
-            except FileNotFoundError:
-                print("Файлы f.xml и f.json не найдены.")
+            print("Файл f.xml не найден.")
+    
+    def load_data_json(self):
+        try:
+            patients, doctors, nurses, medications, appointments, diseases, treatments, rooms, bills, payments = JsonHandler.load_from_json("/Users/kseniamalahova/Desktop/proga.lab1/f.json")
+            self.patients = patients
+            self.doctors = doctors
+            self.nurses = nurses
+            self.medications = medications
+            self.appointments = appointments
+            self.diseases = diseases
+            self.treatments = treatments
+            self.rooms = rooms
+            self.bills = bills
+            self.payments = payments
+
+            print(f"Загружено {len(self.patients)} пациентов, {len(self.doctors)} врачей, {len(self.nurses)} медсестер, {len(self.medications)} лекарств, {len(self.appointments)} назначений, {len(self.diseases)} болезней, {len(self.treatments)} лечений, {len(self.rooms)} палат, {len(self.bills)} счетов и {len(self.payments)} оплат.")
+        except FileNotFoundError:
+            print("Файлы f.xml и f.json не найдены.")

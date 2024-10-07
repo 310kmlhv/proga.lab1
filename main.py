@@ -48,10 +48,14 @@ def main():
         elif choice == "20":
             menu.display_payments()
         elif choice == "21":
-            menu.save_data()
+            menu.save_data_xml()
         elif choice == "22":
-            menu.load_data()
+            menu.save_data_json()
         elif choice == "23":
+            menu.load_data_xml()
+        elif choice == "24":
+            menu.load_data_json()
+        elif choice == "25":
             break
         else:
             print("Неверный выбор. Пожалуйста, повторите.")
