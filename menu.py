@@ -99,10 +99,27 @@ class Menu:
 
     # Метод добавления палаты
     def add_room(self):
-        number = input("Введите номер палаты: ")
+        while True:
+            try:
+                number = input("Введите номер палаты (целое число): ")
+                # Проверяем, является ли номер целым числом
+                number = int(number)  
+                break  
+            except ValueError:
+                print("Ошибка! Номер палаты должен быть целым числом. Попробуйте снова.")
+        
+        
         type = input("Введите тип палаты: ")
         self.rooms.append(Room(len(self.rooms) + 1, number, type))
         print(f"Палата '{number}' добавлена успешно.")
+
+    # # Метод добавления палаты
+    # def add_room(self):
+    #     number = input("Введите номер палаты: ")
+    #     type = input("Введите тип палаты: ")
+    #     self.rooms.append(Room(len(self.rooms) + 1, number, type))
+    #     print(f"Палата '{number}' добавлена успешно.")
+
 
     # Метод добавления счета
     def add_bill(self):
@@ -224,7 +241,7 @@ class Menu:
         ]
         diseases = [{"id": d.id, "name": d.name, "description": d.description} for d in self.diseases]
         treatments = [{"id": t.id, "name": t.name, "description": t.description} for t in self.treatments]
-        rooms = [{"id": r.id, "number": r.number, "type": r.type} for r in self.rooms]
+        rooms = [{"id": str(r.id), "number": str(r.number), "type": r.type} for r in self.rooms]
         bills = [{"id": b.id, "patient_id": b.patient_id, "amount": b.amount} for b in self.bills]
         payments = [{"id": p.id, "bill_id": p.bill_id, "amount": p.amount, "date": p.date} for p in self.payments]
 
@@ -295,4 +312,4 @@ class Menu:
 
             print(f"Загружено {len(self.patients)} пациентов, {len(self.doctors)} врачей, {len(self.nurses)} медсестер, {len(self.medications)} лекарств, {len(self.appointments)} назначений, {len(self.diseases)} болезней, {len(self.treatments)} лечений, {len(self.rooms)} палат, {len(self.bills)} счетов и {len(self.payments)} оплат.")
         except FileNotFoundError:
-            print("Файлы f.xml и f.json не найдены.")
+            print("Файл f.json не найден.")

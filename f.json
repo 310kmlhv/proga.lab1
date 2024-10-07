@@ -2,27 +2,71 @@
   "patients": [
     {
       "id": 1,
-      "name": "katia"
+      "name": "Boris"
     }
   ],
   "doctors": [
     {
       "id": 1,
-      "name": "vrach"
+      "name": ""
     }
   ],
-  "nurses": [],
-  "medications": [],
-  "appointments": [],
-  "diseases": [],
-  "treatments": [],
+  "nurses": [
+    {
+      "id": 1,
+      "name": "Marina"
+    }
+  ],
+  "medications": [
+    {
+      "id": 1,
+      "name": "Glicin",
+      "dosage": "150"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "doctor_id": 1,
+      "nurse_id": 1,
+      "medication_id": 1
+    }
+  ],
+  "diseases": [
+    {
+      "id": 1,
+      "name": "Vetrianka",
+      "description": "Krasnie Piatna"
+    }
+  ],
+  "treatments": [
+    {
+      "id": 1,
+      "name": "Postelni rezhim",
+      "description": "Spat"
+    }
+  ],
   "rooms": [
     {
       "id": 1,
-      "number": "123",
-      "type": "obshaia"
+      "number": 100,
+      "type": "Lichnaia"
     }
   ],
-  "bills": [],
-  "payments": []
+  "bills": [
+    {
+      "id": 1,
+      "patient_id": 1,
+      "amount": 1000.0
+    }
+  ],
+  "payments": [
+    {
+      "id": 1,
+      "bill_id": 1,
+      "amount": 1000.0,
+      "date": "01.01.2024"
+    }
+  ]
 }
